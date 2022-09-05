@@ -25,9 +25,9 @@ outputfilepath = os.path.join("Analysis", "election_analysis.txt")
 #Initialize vote count to 0
 
 total_votes = 0
-candidate_options = []
+candidate_picks = []
 candidate_votes = {}
-winning_candidate = 0
+winning_candidate = ""
 winning_count = 0
 winning_percentage = 0
 
@@ -43,13 +43,13 @@ with open(csvfilepath) as election_data:
     for i in file_reader:
         total_votes +=1
         candidate_name = i[2]
-        if candidate_name not in candidate_options:
+        #if the candidate is not in the names already in the candidate list
+        if candidate_name not in candidate_picks:
             #Add it to the list of candidates.
-            candidate_options.append(candidate_name)
+            candidate_picks.append(candidate_name)
             #Begin tracking that candidate's vote count.
             candidate_votes[candidate_name] = 0
         candidate_votes[candidate_name] += 1
-        
 
 # Determine the percentage of votes for each candidate by looping through the counts.
 # 1. Iterate through the candidate list.
@@ -63,8 +63,8 @@ for candidate_name in candidate_votes:
         winning_count = votes
         winning_percentage = vote_percentage
         winning_candidate = candidate_name
-        
-    print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+
+    # print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
 
 winning_candidate_summary = (
     f"-------------------------\n"
@@ -73,4 +73,22 @@ winning_candidate_summary = (
     f"Winning Percentage: {winning_percentage:.1f}%\n"
     f"-------------------------\n")
 
-print(winning_candidate_summary)
+# print(winning_candidate_summary)
+
+with open(outputfilepath, "w") as txt_file:
+
+            election_results = (
+                f"\nElection Results\n"
+                f"\n--------------------\n"
+                f"Total Votes:  {total_votes:,}\n"
+                f"\n--------------------\n")
+
+            print(election_results,end="")
+
+            txt_file.write(election_results)
+        
+            candidate_results = (f"Winner: {candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+
+            print(candidate_results)
+
+            txt_file.write(candidate_results)
