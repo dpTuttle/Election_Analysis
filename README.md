@@ -33,8 +33,32 @@ The analyis of the election show that:
 
 ## Overview of Election Audit
 
-  * The purpose of this election audit analyis was to convert raw ballot data into clear election result subcategories: votes by candidate and votes by precinct. Additionally the analysis defined which precinct had the greatest voter turnout and who was the election winner based on number of popular votes received and the percentage of votes received. 
+  * The purpose of this election audit analyis was to convert raw ballot data into clear election result subcategories: votes by candidate and votes by county. Additionally the analysis defined which precinct had the greatest voter turnout and who was the election winner based on number of popular votes received and the percentage of votes received. 
 
+## Election Audit Results
 
+  * There were 369,711 votes cast in the election. 
+  * **Results by County:**
+      * Jefferson county cast 10.5% of the total votes cast with 38,855 votes.
+      * Denver county cast 82.8% of the total votes cast with 306,055 votes.
+      * Arapahoe county cast 6.7% of the total votes cast with 24,801 votes. 
+    **Denver county had the largest number of votes cast.**
+  
+  * **Results by Candidate:**
+      * Charles Casper Stockholm received 23.0% of the total vote with 85,213 ballots cast.
+      * Diana DeGettte received 73.8% of the total vote with 272,892 ballots cast. 
+      * Raymon Anthony Doane received 3.1% of the total vote with 11,606 ballots cast. 
 
-## Challenge Summary
+  * **Overall Winner**
+      * With a total ballot count of 272,892 or 73.8% of the vote, Diana DeGette is the winner. 
+
+*The below text file provides the overall summary as well as calculated by the analysis script:*
+
+###### **Election Summary Text File**
+
+![Screen_Shot_3](https://github.com/dpTuttle/Election_Analysis/blob/main/Resources/Screen_Shot_3.png)
+
+## Election Audit Summary:
+  * For the purposes of future elections, I believe this analyis script provides quick and efficient election results for precinct elections. With two modifications, I feel this may be effective for any election. First, adjusting the lists and dictionaries to add a 4th category: cities, would allow the code to drill down on election results in each county. Secondly, to process larger data sets, it would be useful to not use multiple "for..." statements and just use one "for.." statement with nested conditionals to save all categories (cities, counties, and candidates) to a single dictionary. This would dramatically reduce processing time and allow for state or even national election analysis with drill down. 
+  
+  
