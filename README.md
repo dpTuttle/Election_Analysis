@@ -15,18 +15,26 @@ A Colorado Board of Elections employee has given you the following tasks to comp
 
 ## Summary
 The analyis of the election show that:
-- There are "x" votes cast in the election.
+- There are 369,711 votes cast in the election.
 - The candidates were:
-  - Candidate 1
-  - Candidate 2
-  - Candidate 3
+  - Charles Casper Stockholm
+  - Diana DeGette
+  - Raymon Anthony Doane
+  
 - The candidate results were:
-  - Candidate 1 received "x%" of the vote and "y" number of votes.
-  - Candidate 2 received "x%" of the vote and "y" number of votes.
-  - Candidate 3 recieved "x%" of the vote and "y" number of votes.
+  - Charles Casper Stockholm received 23% of the vote and 85,213 number of votes.
+  - Diana DeGette received 73.8% of the vote and 272,892 number of votes.
+  - Candidate 3 recieved 3.1% of the vote and 11,606 number of votes.
+  
 -The winner of the election was:
-  - Candidate (1, 2 or 3), who received "x%" of the vote and "y" number of votes. 
+  - Diana DeGette, who received 73.8% of the vote and 272,892 number of votes. 
+  
+<br>
 
-## Challenge Overview
+## Overview of Election Audit
+
+  * The purpose of this election audit analyis was to convert raw ballot data into clear election result subcategories: votes by candidate and votes by precinct. Additionally the analysis defined which precinct had the greatest voter turnout and who was the election winner based on number of popular votes received and the percentage of votes received. 
+
+
 
 ## Challenge Summary
